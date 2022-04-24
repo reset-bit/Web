@@ -1,0 +1,117 @@
+/* header */
+.header-menu-wrapper ul.header-menu-left li>a>span,
+.header-menu-wrapper ul.header-menu-right li>a>span {
+	position: relative;
+	border-bottom: none;
+}
+ul.header-menu-left li span::after,
+ul.header-menu-right li span::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0%;
+	height: 1px;
+	background-color: #fff;
+	transition: all .3s;
+}
+ul.header-menu-left li:hover span::after,
+ul.header-menu-right li:hover span::after {
+	left: 0%;
+	width: 100%;
+}
+ul.header-menu-left li.active span::after,
+ul.header-menu-right li.active span::after {
+	left: 0%;
+	width: 100%;
+}
+ul.sub-menu.active {
+	display: block;
+}
+ul.sub-menu>li>a {
+	font-size: 12px;
+	font-weight: 400;
+}
+
+.container {
+	padding-top: 50px;
+}
+/* 排序工具栏 */
+.sort-wrapper {
+	margin-top: 20px;
+	height: 50px;
+	line-height: 50px;
+	background-color: whitesmoke;
+}
+span.sub-title {
+	padding: 0 20px 0 40px;
+	font-size: 16px;
+	color: #888;
+}
+span.btn-sort {
+	background-color: #fff;
+	padding: 4px 10px;
+	margin: 0 10px;
+	font-size: 12px;
+	color: #888;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: all .3s;
+}
+span.btn-sort.active {
+	border-color: #000;
+	color: #000;
+}
+/* 主内容区 */
+dl.content {
+	font-size: 0;
+	margin-bottom: 40px;
+}
+dl.content dd {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 25%;
+	height: 350px;
+	padding: 0 10px;
+	vertical-align: top;
+}
+dl.content dd a {
+	display: block;
+	height: 100%;
+	text-align: center;
+}
+.content a>img {
+	height: 65%;
+}
+.content a>h6 {
+	font-size: 16px;
+	color: #333333;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.content a>span {
+	display: inline-block;
+	font-size: 16px;
+	transform: scale(.9);
+	font-family: 'microsoft yahei';
+	margin: 6px 0;
+}
+.marks {
+	height: 20px;
+}
+.marks span {
+	font-size: 12px;
+	padding: 2px 4px;
+	border-radius: 4px;
+	margin: 0 4px;
+}
+.marks span.color-mark {
+	background-color: #eee;
+	color: #888;
+}
+.marks span.preferential-mark,
+.marks span.exclusive-mark {
+	background-color: #ffeae7;
+	color: #ff9c9a;
+}

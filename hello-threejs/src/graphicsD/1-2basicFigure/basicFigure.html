@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .canvas-container,
+        .gif-container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .btns {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+        
+        .gif-container img {
+            position: absolute;
+            visibility: hidden;
+            height: 60px;
+            border: 2px solid #aaa;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+    </style>
+    <script src="canvas-util.js"></script>
+    <script src="basicFigure.js"></script>
+    <script src="drawLine.js"></script>
+    <script src="drawTriangle.js"></script>
+    <title>basicFigure</title>
+</head>
+
+<body>
+    <div class="canvas-container"></div>
+    <div class="btns">
+        <button class="draw-line-btn">draw line</button>
+        <button class="draw-triangle-btn">draw triangle</button>
+        <button class="triangle-one-pixel-btn">one pixel</button>
+        <button class="triangle-fill-btn">fill triangle</button>
+    </div>
+    <div class="gif-container">
+        <img src="" alt="" id="p1Img">
+        <img src="" alt="" id="p2Img">
+        <img src="" alt="" id="p3Img">
+    </div>
+
+    <script>
+        init();
+        // init2();
+    </script>
+</body>
+
+</html>

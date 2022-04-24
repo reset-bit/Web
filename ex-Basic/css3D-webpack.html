@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <!-- <link rel="stylesheet" href="test.css"> -->
+	<style>
+		ul {
+			list-style: none;
+			padding: 0;
+		}
+		.demo-cube {
+			position: relative;
+			height: 200px;
+			width: 100%;
+			margin: auto;
+  			background-color: #2b3a42;
+		}
+		ul.cube-inner {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -25px 0 0 -25px;
+			transform-style: preserve-3d;
+			transform-origin: 25px 25px;
+			transform: rotateX(-33.5deg) rotateY(45deg);
+			animation: fastspin 6s ease-in-out infinite 2s;
+		}
+		ul.cube-inner li {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 50px;
+			height: 50px;
+			background-color: #175d96;
+			border: 1px solid #fff;
+		}
+		ul.cube-inner li.top {
+			transform: rotateX(90deg) translateZ(25px);
+		}
+		ul.cube-inner li.bottom {
+			transform: rotate(-90deg) translateZ(25px);
+		}
+		ul.cube-inner li.front {
+			transform: translateZ(25px);
+		}
+		ul.cube-inner li.back {
+			transform: rotateX(-180deg) translateZ(25px);
+		}
+		ul.cube-inner li.left {
+			transform: rotateY(-90deg) translateZ(25px);
+		}
+		ul.cube-inner li.right {
+			transform: rotateY(90deg) translateZ(25px);
+		}
+		ul.cube {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -50px 0 0 -50px;
+			transform-style: preserve-3d;
+			transform-origin: 50px 50px;
+			transform: rotateX(-33.5deg) rotateY(45deg);
+			animation: slowspin 6s ease-in-out infinite 2s;
+		}
+		ul.cube li {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100px;
+			height: 100px;
+			background-color: rgba(141, 214, 249, .5);
+			border: 1px solid #fff;
+		}
+		ul.cube li.top {
+			transform: rotateX(90deg) translateZ(50px);
+		}
+		ul.cube li.bottom {
+			transform: rotateX(-90deg) translateZ(50px);
+		}
+		ul.cube li.front {
+			transform: translateZ(50px);
+		}
+		ul.cube li.back {
+			transform: rotateX(-180deg) translateZ(50px);
+		}
+		ul.cube li.left {
+			transform: rotateY(-90deg) translateZ(50px);
+		}
+		ul.cube li.right {
+			transform: rotateY(90deg) translateZ(50px);
+		}
+		@keyframes fastspin {
+			0% {
+				transform: rotateX(-33.5deg) rotateY(45deg);
+			}
+			40%, to {
+				transform: rotateX(-33.5deg) rotateY(-315deg);
+			}
+		}
+		@keyframes slowspin {
+			0% {
+				transform: rotateX(-33.5deg) rotateY(45deg);
+			}
+			40%, to {
+				transform: rotateX(-33.5deg) rotateY(315deg);
+			}
+		}
+	</style>
+    <title>Document</title>
+</head>
+<body>
+	<div class="demo-cube">
+		<ul class="cube-inner">
+			<li class="top"></li>
+			<li class="bottom"></li>
+			<li class="front"></li>
+			<li class="back"></li>
+			<li class=right></li>
+			<li class=left></li>
+		</ul>
+		<ul class="cube">
+			<li class="top"></li>
+			<li class="bottom"></li>
+			<li class="front"></li>
+			<li class="back"></li>
+			<li class=right></li>
+			<li class=left></li>
+		</ul>
+	</div>
+</body>
+</html>

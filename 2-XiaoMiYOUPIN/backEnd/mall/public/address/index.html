@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!-- <link rel="stylesheet" href="/plugins/layer/mobile/need/layer.css"> -->
+		<link rel="stylesheet" href="/plugins/layui/css/layui.css">
+		<link rel="stylesheet" href="/assets/css/reset.css"/>
+		<link rel="stylesheet" href="/assets/css/public.css"/>
+		<link rel="stylesheet" href="/plugins/picker/regions_picker_m.css">
+		<link rel="stylesheet" href="/assets/font/iconfont.css">
+		<link rel="stylesheet" href="index.css"/>
+		<title>有品</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<a href="/profile/index.html"><i class="iconfont icon-back"></i></a>
+				<span class="title">收货地址</span>
+			</div>
+			<div class="content-wrapper">
+				<div class="empty-content">
+					<img src="../images/no_result_address.png" alt="">
+					<span>您还没有收货地址，点击下方+新建</span>
+				</div>
+				<div class="content">
+					<ul class="list"></ul>
+				</div>
+				<div class="btn-add-wrapper">
+					<div class="btn-add">+ 添加地址</div>
+				</div>
+			</div>
+		</div>
+				
+		<div class="edit-module">
+			<div class="module-header">
+				<i class="iconfont icon-back"></i>
+				<span class="module-title">新增地址</span>
+			</div>
+			<div class="module-content">
+				<form class="layui-form">
+					<div class="content-item border-1px">
+						<label for="receiveName">收货姓名</label>
+						<input type="text" placeholder="请输入收货人姓名" class="receive-name" name="receiveName"/>
+					</div>
+					<div class="content-item border-1px">
+						<label for="receivePhone">手机号码</label>
+						<input type="number" placeholder="请输入收货人电话" class="receive-phone" name="receivePhone"/>
+					</div>
+					<div class="content-item border-1px">
+						<label for="receiveRegion">收货地区</label>
+						<input type="text" placeholder="请选择省/市/区街道" class="regions-picker receive-region" name="receiveRegion"/>
+					</div>
+					<div class="content-item border-1px">
+						<label for="receiveDetail">详细地址</label>
+						<input type="text" placeholder="请输入街道地址" class="receive-detail" name="receiveDetail"/>
+					</div>
+					<div class="content-item border-1px last">
+						<label>设为默认地址</label>
+						<input type="checkbox" class="btn-default" lay-skin="switch"/>
+					</div>
+					<span class="btn-remove">删除收货地址</span>
+				</form>
+				<div class="btn-save">保存</div>
+			</div>
+		</div>
+		
+		<script src="/assets/js/jQuery-1.8.2.js"></script>
+		<script src="/assets/js/js-cookie.js"></script>
+		<script src="/plugins/picker/regions.js"></script>
+		<script src="/plugins/picker/regions_picker_m.js"></script>
+		<!-- <script src="/plugins/layer/mobile/layer.js"></script> -->
+		<script src="/plugins/layui/layui.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>稍微复杂一点点的html5实例</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">不知道啥标题好啦</h1>
+        <!--form是供文本输入的单行输入字段（登陆使用）-->
+        <form action="action_page.php"><!--有生之年系列，php终于让我给碰到了，这个应该是后端-->
+            First name:<br/>
+            <input type="text" name="firstname"><br/>
+            Last name:<br/>
+            <input type="text" name="lastname">
+            <!--
+                如果是<input type="password" name="psw">
+                字符会被当作掩码处理奥（显示为星号或实心圆）
+            -->
+            <input type="submit" value="submit">
+            <!--
+                定义提交表单数据至表单处理程序的按钮
+                form-handler通常是包含处理输入数据的脚本的服务器页面
+                在表单的action属性（如上例）中规定表单处理程序
+            -->
+        </form>
+    </body>
+</html>

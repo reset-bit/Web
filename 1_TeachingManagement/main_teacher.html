@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>main_teacher</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/util.css">
+        <link rel="stylesheet" href="css/main_teacher.css">
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Teaching management</h3>
+                </div>
+
+                <ul class="list-unstyled components" id="myTab">
+                    <p>Hi， <span id="userName">demo</span>(teacher)</p>
+                    <li class="out-li double-li">
+                        <!-- data-toggle折叠触发；aria-expanded不展开 -->
+                        <a href="#aboutCourse" data-toggle="collapse" aria-expanded="false">课程管理</a>
+                        <ul class="collapse list-unstyled" id="aboutCourse">
+                            <li class="inner-li"><a href="#course" data-toggle="tab" aria-expanded="false" class="goTab">本学期授课</a></li>
+                            <!-- <li class="inner-li"><a href="#grade" data-toggle="tab" aria-expanded="false" class="goTab">录入成绩</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="out-li single-li">
+                        <a href="#evaluation" data-toggle="tab" aria-expanded="false" class="goTab">评教</a>
+                    </li>
+                    <li class="out-li single-li">
+                        <a href="#announcement" data-toggle="tab" aria-expanded="false" class="goTab">公告</a>
+                    </li>
+                </ul>
+
+                <ul class="list-unstyled CTAs">
+                    <li><a href="#" class="personal">个人中心</a></li>
+                    <li><a href="#" class="exit" onclick='showExitDialog()'>退出登录</a></li>
+                </ul>
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn navbar-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-list" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="slogan">
+                            <span id="date">2021-07-16</span>, a beautiful day :-)
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade in active" id="course">
+                        <p>这是course显示区域</p>
+                    </div>
+
+                    <!-- <div class="tab-pane fade" id="grade">
+                        <p>这是course显示区域</p>
+                    </div> -->
+
+                    <div class="tab-pane fade" id="evaluation">
+                        <p>这是evaluation显示区域</p>
+                    </div>
+
+                    <div class="tab-pane fade" id="announcement">
+                        <div class="announcement-bar">
+                            <div class="ann-title">公告1</div>
+                            <div class="ann-content">
+                                公告1内容这是evaluation显示区域这是evaluation显示区域这是evaluation显示区域
+                                公告1内容这是evaluation显示区域这是evaluation显示区域这是evaluation显示区域
+                                公告1内容这是evaluation显示区域这是evaluation显示区域这是evaluation显示区域
+                            </div>
+                        </div>
+                        <div class="announcement-bar">
+                            <div class="ann-title">公告1</div>
+                            <div class="ann-content">
+                                公告1内容这是evaluation显示区域这是evaluation显示区域这是evaluation显示区域
+                                公告1内容这是evaluation显示区域这是evaluation显示区域这是evaluation显示区域
+                                公告1内容这是evaluation显示区域这是evaluation显示区域这是evaluation显示区域
+                            </div>
+                        </div>
+                        <div class="announcement-bar">
+                            <div class="ann-title">公告1</div>
+                            <div class="ann-content">
+                                公告1内容这是evaluation显示区域这是evaluation显示区域这是evaluation显示区域
+                                公告1内容这是evaluation显示区域这是evaluation显示区域这是evaluation显示区域
+                                公告1内容这是evaluation显示区域这是evaluation显示区域这是evaluation显示区域
+                            </div>
+                        </div>
+
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination" id="page">
+                                <li class="page-item"><a class="page-link" href="#">首页</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">末页</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- exitModal begin -->
+        <div class="modal fade" id="exitModal"
+             tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exitModalLabel">提示</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>您确定退出吗？</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" onclick='doExit()'>确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- exitModal end -->
+
+         <script type="text/javascript">
+            // init page
+            jQuery(window).load(function(){
+                let height = jQuery(window).height();
+                console.log(height);
+                if(jQuery("#sidebar").height() < height){
+                    jQuery("html").height(height);
+                    jQuery(".wrapper").height(height);
+                    jQuery("#sidebar").height(height);
+                }
+                jQuery("#content").height(jQuery("#sidebar").height()*0.9);
+
+                // 分页
+                jQuery.post("newsinfoController/findAllNewsinfo", function(rst){
+                    console.log("rst.length="+rst.length);
+                    let rows = "";
+                    sessionStorage.setItem("annLength", rst.length);
+                    for(let i = 1; i < rst.length + 1; ++i){
+                        let ann = rst[i-1];
+                        console.log(ann);
+                        rows += `
+                                <div class="announcement-bar">
+                                    <div class="ann-title">${ann.ntitle}</div>
+                                    <div class="ann-content">${ann.ncontent}</div>
+                                </div>
+                            `;
+                        if(i == rst.length){
+                            rows += `
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination" id="page">
+                                    </ul>
+                                </nav>
+                            `;
+                        }
+                    }
+                    jQuery("#announcement").html(rows);
+                    goPage(1);
+                }, "json");
+            });
+
+            // 分页
+            function goPage(pno){//当前页
+                let length = sessionStorage.getItem("annLength");//JSON.parse(jQuery.sessionStorage.getItem("annLength"))
+                // let length = 4;
+                let pageSize = 3;//每页显示行数
+                let totalPage = 0;//总页数
+                if(length/pageSize > parseInt(length/pageSize)){
+                    totalPage = parseInt(length/pageSize) + 1;
+                }
+                else{
+                    totalPage = parseInt(length/pageSize);
+                }
+
+                let currentPage = pno;//当前页数
+                let startRow = (currentPage - 1) * pageSize + 1;//开始行
+                let endRow = currentPage * pageSize;//终止行
+                endRow = (endRow > length)? length : endRow;
+                console.log("startRow"+startRow+"\tendRow:"+endRow);
+                //遍历控制数据显示，实现分页
+                let irow = document.getElementsByClassName("announcement-bar");
+                for(let i = 0; i < length; i++){
+                    // console.log(irow[i]);
+                    if((i+1) >= startRow && (i+1) <= endRow){
+                        irow[i].style.display = "flex";//从0开始
+                    }
+                    else{
+                        irow[i].style.display = "none";
+                    }
+                    if((i+1) == endRow){
+                        irow[i].style.border = "none";
+                    }
+                }
+
+                let tempStr = "";
+                if(currentPage>1){
+                    tempStr += "<li class=\"page-item\"><a class=\"page-link\" href=\"#\" onClick=\"goPage("+(1)+")\">首页</a></li>";
+                    tempStr += "<li class=\"page-item\"><a class=\"page-link\" href=\"#\" onClick=\"goPage("+(currentPage-1)+")\">上一页</a></li>";
+                }else{
+                    tempStr += "<li class=\"page-item\"><a class=\"page-link\" href=\"#\">首页</a></li>";
+                    tempStr += "<li class=\"page-item\"><a class=\"page-link\" href=\"#\">上一页</a></li>";
+                }
+                if(currentPage<totalPage){
+                    tempStr += "<li class=\"page-item\"><a class=\"page-link\" href=\"#\" onClick=\"goPage("+(currentPage+1)+")\">下一页</a></li>";
+                    tempStr += "<li class=\"page-item\"><a class=\"page-link\" href=\"#\" onClick=\"goPage("+(totalPage)+")\">尾页</a></li>";
+                }else{
+                    tempStr += "<li class=\"page-item\"><a class=\"page-link\" href=\"#\">下一页</a></li>";
+                    tempStr += "<li class=\"page-item\"><a class=\"page-link\" href=\"#\">尾页</a></li>";
+                }
+                jQuery("#page").html(tempStr);
+            }
+
+            // exit
+            function showExitDialog(){
+                jQuery("#exitModal").modal("show");
+            }
+            function doExit(){
+                // sessionStorage.removeItem("userInfo");
+                jQuery("#exitModal").modal("hide");
+                //此处跳转至登录页
+                // location.href="";
+            }
+
+            jQuery(document).ready(function () {
+                //  sidebar
+                jQuery('#sidebarCollapse').on('click', function () {
+                    console.log("demo");
+                    jQuery('#sidebar').toggleClass('active');
+                });
+                jQuery(".single-li").click(function (){
+                    jQuery("#myTab .double-li a").attr("aria-expanded","false");
+                    jQuery("#myTab .double-li ul").attr("aria-expanded","false");
+                    jQuery("#myTab .double-li ul").removeClass("in");
+                });
+                jQuery(".inner-li").click(function (){
+                    jQuery("#myTab .single-li").removeClass("active");
+                    jQuery("#myTab .single-li a").attr("aria-expanded","false");
+                });
+                jQuery(".double-li").click(function (){
+                    let siblings = jQuery(this).siblings();
+                    siblings.find("a").attr("aria-expanded","false");
+                    siblings.find("ul").removeClass("in");
+                });
+
+                //  ------假设
+                let user = {"userNo":1,"userName":"张三"};
+                let str = JSON.stringify(user);
+                sessionStorage.setItem("userInfo", str);
+                //  ------假设
+
+                //  userinfo
+                let userinfo = sessionStorage.getItem("userInfo");
+                jQuery("#userName").html(JSON.parse(userinfo).userName);
+
+                    //date
+                let date = new Date();
+                let year = date.getFullYear();
+                let tmp = date.getMonth()+1;
+                let month = tmp < 10 ? "0"+tmp : tmp;
+                tmp = date.getDate();
+                let day = tmp < 10 ? "0"+tmp : tmp;
+                jQuery("#date").html(year+"-"+month+"-"+day);
+            });
+         </script>
+    </body>
+</html>

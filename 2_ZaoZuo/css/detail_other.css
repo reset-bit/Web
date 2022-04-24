@@ -1,0 +1,36 @@
+h6.price>span {
+	font-size: 14px;
+}
+.dl-container {
+	overflow: hidden;
+}
+dl.content-item:nth-child(3) dd,
+dl.content-item:nth-child(6) dd {
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.dl-container dl.content-item:nth-child(4),
+.dl-container dl.content-item:nth-child(5) {
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
+}
+.dl-container dl.content-item:nth-child(4) dt,
+.dl-container dl.content-item:nth-child(5) dt {
+	background-size: 100% 100%;
+}
+.dl-container dl.content-item:nth-child(4) dt {
+	box-sizing: border-box;
+	border-right: 20px solid #fff;
+}
+.dl-container dl.content-item:nth-child(4) dd>*,
+.dl-container dl.content-item:nth-child(5) dd>* {
+	color: #000;
+}
+
+.order-share-item {
+	font-size: 12px;
+	min-height: 200px;
+}

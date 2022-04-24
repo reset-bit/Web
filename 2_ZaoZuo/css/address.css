@@ -1,0 +1,385 @@
+ul.header-menu-right>li:nth-child(4)>a>span {
+	border-bottom: 1px solid #fff;
+}
+.nav-bar-wrapper {
+	border-bottom: 1px solid gray;
+	background-color: #f6f6f6;
+	padding-left: 104px;
+}
+.nav-bar {
+	font-size: 0;
+	position: relative;
+}
+.nav-bar span:not(span:last-child) {
+	display: inline-block;
+	padding-right: 50px;
+}
+.nav-bar a {
+	box-sizing: border-box;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	color: #333;
+	text-align: center;
+}
+span.shuttle {
+	position: absolute;
+	bottom: 0;
+	height: 2px;
+	background-color: #000;
+	transition: all .5s;
+}
+
+.content {
+	--item-height: 220px;
+}
+.user-area {
+	height: var(--item-height);
+	border-bottom: 1px solid #d2d2d2;
+}
+.user-area::before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+span.left {
+	display: inline-block;
+	width: 55%;
+	vertical-align: middle;
+}
+span.left img {
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+	padding: 30px;
+	vertical-align: middle;
+}
+span.left span.member-nameplate {
+	display: inline-block;
+	height: 20px;
+	width: 26px;
+	background-image: url(../images/usertitle.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	padding: 0 6px;
+}
+span.left span.nickname {
+	font-size: 14px;
+	color: #888888;
+	vertical-align: middle;
+}
+span.right {
+	display: inline-block;
+	box-sizing: border-box;
+	height: 50%;
+	width: 45%;
+	vertical-align: middle;
+}
+span.right::before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	width: 1px;
+	background-color: #D2d2d2;
+	vertical-align: top;
+}
+span.right>div {
+	display: inline-block;
+	height: 100%;
+	padding-left: 20px;
+	vertical-align: top;
+	writing-mode: vertical-lr;
+	text-align: justify;
+}
+span.right>div::after {
+	content: '';
+	display: inline-block;
+	height: 100%;
+}
+span.right>div>h6 {
+	display: inline-block;
+	font-size: 24px;
+	writing-mode: horizontal-tb;
+	vertical-align: bottom;
+}
+span.bind-type {
+	display: inline-block;
+	writing-mode: horizontal-tb;
+	vertical-align: bottom;
+}
+span.bind-type span {
+	display: inline-block;
+	height: 36px;
+	width: 36px;
+	margin-right: 20px;
+	background-color: #a0a0a0;
+	vertical-align: bottom;
+	background-image: url(../images/sprite-3.png);
+	cursor: pointer;
+}
+span.bind-type span:hover {
+	background-color: #00b472;
+}
+span.bind-type span:nth-child(1) {
+	background-position: -36px 0;
+}
+span.bind-type span:nth-child(2) {
+	background-position: -72px 0;
+}
+span.bind-type span:nth-child(3) {
+	background-position: 0 0;
+	background-color: #00b472;
+}
+span.bind-type span:last-child {
+	height: auto;
+	width: auto;
+	background-color: #fff;
+	margin-left: -10px;
+}
+span.bind-type span:last-child>a {
+	color: #00b472;
+	font-size: 14px;
+}
+span.bind-type span:last-child>span {
+	display: inline-block;
+	height: 14px;
+	width: 14px;
+	background-image: url(../images/sprite-1.png);
+	/* 461*60 */
+	background-size: 322.7px 42px;
+	background-position: -281px -14px;
+	margin: 2px;
+}
+
+span.sub-title {
+	font-size: 28px;
+	font-weight: 100;
+	padding-bottom: 20px;
+	letter-spacing: 4px;
+}
+span.btn-add {
+	font-size: 16px;
+	padding: 10px 20px;
+	border-radius: 30px;
+	cursor: pointer;
+}
+.bank-card {
+	padding: 50px 0;
+	height: var(--item-height);
+}
+.bank-card span.btn-add {
+	border: 2px solid #1b1b1b;
+	border-radius: 30px;
+}
+.bank-card span.btn-add:hover {
+	background-color: #1b1b1b;
+	color: #fff;
+}
+.bank-card {
+	box-sizing: border-box;
+	writing-mode: vertical-lr;
+	text-align: justify;
+}
+.bank-card::after {
+	content: '';
+	display: inline-block;
+	height: 100%;
+}
+.bank-card>span {
+	writing-mode: horizontal-tb;
+}
+.address-wrapper {
+	background-image: url(../images/address-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: 0 -220px;
+}
+.address {
+	padding: 80px 0;
+}
+.address>span {
+	display: block;
+	color: #fff;
+	vertical-align: bottom;
+}
+span.address-item {
+	display: block;
+	font-size: 14px;
+}
+span.address-item>span {
+	color: #fff;
+	vertical-align: middle;
+}
+span.address-info {
+	box-sizing: border-box;
+	height: 50px;
+	line-height: 50px;
+	padding: 10px 0;
+	border-bottom: 2px solid transparent;
+	margin-right: 10px;
+	font-size: 16px;
+	transform: scale(.9);
+}
+span.address-info>span {
+	color: #fff;
+	letter-spacing: 1px;
+}
+span.address-item>span.is-default {
+	display: none;
+	font-size: 14px;
+	color: #000;
+	padding: 6px 10px;
+	background-color: #fff;
+	border-radius: 20px;
+	margin-right: 10px;
+}
+span.edit {
+	display: none;
+	height: 30px;
+	width: 30px;
+	background-image: url(../images/sprite-5.png);
+	background-position: -480px -60px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+span.btn-default {
+	display: none;
+	padding: 6px;
+	font-size: 14px;
+	border: 2px solid #fff;
+	margin-right: 10px;
+	cursor: pointer;
+}
+span.btn-default:hover {
+	background-color: #fff;
+	color: #333333;
+}
+span.remove {
+	display: none;
+	width: 20px;
+	height: 20px;
+	background-image: url(../images/sprite-1.png);
+	background-position: -241px 0;
+	cursor: pointer;
+}
+span.address-item.default span.is-default{
+	display: inline-block;
+}
+span.address-item:hover span.address-info {
+	border-color: #fff;
+}
+span.address-item.default:hover span.is-default {
+	display: none;
+}
+span.address-item:hover span.edit,
+span.address-item:not(.default):hover span.btn-default,
+span.address-item:hover span.remove {
+	display: inline-block;
+}
+.address span.btn-add {
+	display: inline-block;
+	margin-top: 20px;
+	border: 2px solid #00b472;
+	background-color: #00b472;
+}
+.address span.btn-add:hover {
+	background-color: #259671;
+	border-color: #259671;
+}
+
+/* 收货地址模态框 */
+.edit-address-pop-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,.4);
+	z-index: -1;
+	opacity: 0;
+	transition: all .3s;
+}
+.edit-address-pop-wrapper.active {
+	z-index: 1;
+	opacity: 1;
+}
+.edit-address-pop {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 410px;
+	width: 840px;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	padding: 0 30px;
+	background-color: #fff;
+}
+.form-item {
+	box-sizing: border-box;
+	width: 100%;
+	padding-top: 30px;
+}
+.form-item h6 {
+	font-size: 16px;
+	font-weight: 800;
+	padding-bottom: 10px;
+	letter-spacing: 1px;
+}
+.form-item>span {
+	display: block;
+	font-size: 16px;
+	font-weight: 100;
+	color: #bbb;
+	padding-bottom: 10px;
+}
+.form-item select {
+	width: 160px;
+	padding: 16px 10px;
+	font-size: 14px;
+	color: #333;
+	border-color: #d2d2d2;
+	margin-right: 14px;
+	margin-bottom: 14px;
+}
+.form-item input {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 14px;
+	font-size: 14px;
+	color: #1b1b1b;
+	border: 1px solid #d2d2d2;
+}
+.form-item input::placeholder {
+	color: #1B1B1B;
+	font-size: 14px;
+}
+input.name, input.phone {
+	width: 200px;
+	margin-right: 14px;
+	margin-bottom: 14px;
+}
+.btn-save {
+	width: 250px;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	padding: 16px 0;
+	background-color: #1b1b1b;
+	cursor: pointer;
+}
+.btn-cancel {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 20px;
+	height: 20px;
+	background-image: url(../images/sprite-1.png);
+	background-position: 0 0;
+	cursor: pointer;
+}
+.edit-address-pop-wrapper.warning input::placeholder {
+	color: crimson;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/util.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/href.js"></script>
+    <title>EasyTransfer-Login</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="dec">
+            <img src="image/decoration/dec-cloud-1.svg" alt="" id="dec-cloud-1">
+            <img src="image/decoration/dec-cloud-2.svg" alt="" id="dec-cloud-2">
+            <img src="image/decoration/dec-cloud-3.svg" alt="" id="dec-cloud-3">
+            <div class="plane-wrapper"><img src="image/decoration/dec-plane.svg" alt="" id="dec-plane"></div>
+        </div>
+        <div class="login-wrapper" id="login-wrapper">
+            <!-- 正面 -->
+            <div class="front" id="front">
+                <div class="title" onclick="goCompany()">EasyTransfer</div>
+                <div class="options">
+                    <div class="option" id="login-op" onclick="changeOption(id)">登录</div>
+                    <div class="option" id="register-op" onclick="changeOption(id)">注册</div>
+                </div>
+                <div class="input-area">
+                    <input type="text" id="username" placeholder="邮箱">
+                    <input type="password" id="password" placeholder="密码">
+                    <div class="tips"><text>忘记密码</text></div>
+                </div>
+                <div class="btns">
+                    <div class="btn" id="login-btn" onclick="goHome()">登录</div>
+                    <div class="btn" id="register-btn">注册</div>
+                    <div class="btn ori" onmouseleave="unshowDocBtns()" onmouseenter="showDocBtns()">快速开始</div>
+                    <div class="btn docop" id="sender" onmouseleave="unshowDocBtns()" onmouseenter="showDocBtns()">发送文件</div>
+                    <div class="btn docop" id="receiver" onmouseleave="unshowDocBtns()" onmouseenter="showDocBtns()">接收文件</div>
+                </div>
+            </div>
+            <!-- 背面 -->
+            <div class="back" id="back-sender">
+                <div class="return">
+                    <img src="image/arrow/return.svg">
+                </div>
+                <div class="back-title">发送给</div>
+                <div class="sender-options">
+                    <div class="sender-option back-btn" id="person" data-toggle="modal" data-target="#sendToPerson">目标用户</div>
+                    <div class="sender-option back-btn" id="device">个人设备</div>
+                    <div class="sender-option back-btn" id="people" data-toggle="modal" data-target="#sendToPeople">多人临时</div>
+                </div>
+            </div>
+            <!-- 背面 -->
+            <div class="back" id="back-receiver">
+                <div class="return">
+                    <img src="image/arrow/return.svg">
+                </div>
+                <div class="back-title">请输入取件码</div>
+                <input type="text" placeholder="发送文件后会产生取件码">
+                <div class="back-btn">确定</div>
+            </div>
+        </div>
+    </div>
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="sendToPerson" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <div class="modal-title" id="myModalLabel">
+                        请输入用户名或邮箱：
+                    </div>
+                    <input type="text">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="sendToPeople" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <div class="modal-title" id="myModalLabel">
+                        请输入密码：
+                    </div>
+                    <input type="password" placeholder="和身边进入同一共享文件空间的人输入同一密码">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="goPublic()">
+                        确定
+                    </button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal -->
+    </div>
+</body>
+
+</html>

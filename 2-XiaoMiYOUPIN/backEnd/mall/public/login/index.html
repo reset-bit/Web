@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="/plugins/layer/mobile/need/layer.css">
+		<link rel="stylesheet" href="/plugins/validform/Validform_v5.3.2.css">
+		<link rel="stylesheet" href="/assets/css/reset.css"/>
+		<link rel="stylesheet" href="/assets/css/public.css"/>
+		<link rel="stylesheet" href="/assets/font/iconfont.css">
+		<link rel="stylesheet" href="index.css"/>
+		<title>有品</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="top">
+				<img src="/images/logo.svg" class="logo" />
+				<span class="welcome">欢迎登录小米有品</span>
+			</div>
+			<div class="content-wrapper">
+				<div class="content">
+					<form action="" class="login">
+						<div class="phone">
+							<h5>小米账号登录</h5>
+							<div class="phone-content">
+								<div class="input-wrapper">
+									<label for="phone-input">+86 <i class="iconfont icon-next"></i></label>
+									<span><input type="number" placeholder="请输入手机号" class="phone-input" name="phone-input" datatype="phone" errormsg="请输入正确格式的电话号码"/></span>
+								</div>
+								<div class="btn-next">下一步</div>
+								<div class="tips"><span class="login-pwd">用户名密码登录</span> | <a href="/register/index.html">立即注册</a></div>
+								<div class="other">
+									<h6>其它方式登录</h6>
+									<img src="/images/login_other.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="pwd">
+							<h5>小米账号登录</h5>
+							<div class="pwd-content">
+								<span><input type="text" placeholder="邮箱/手机号码/小米ID" class='name-input' datatype="s3-10" errormsg="ID长度在3-10之间"/></span>
+								<span><input type="password" placeholder="请输入密码" class='pwd-input' datatype="s3-10" errormsg="密码长度在3-10之间"/></span>
+								<div class="btn-login">登录</div>
+								<div class="tips"><span class="login-phone">手机号登录</span> | <a href="/register/index.html">立即注册</a> | <a>忘记密码？</a></div>
+								<div class="other">
+									<h6>其它方式登录</h6>
+									<img src="/images/login_other.png" alt="">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<script src="/assets/js/jQuery-1.8.2.js"></script>
+		<script src="/plugins/validform/Validform_v5.3.2.js"></script>
+		<script src="/assets/js/js-cookie.js"></script>
+		<script src="/plugins/layer/mobile/layer.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>

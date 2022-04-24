@@ -1,0 +1,41 @@
+.nav-content
+        height: 50px
+        width: 100%
+        display: flex
+        a.footer-item
+                height: 100%
+                width: 25%
+                flex-grow: 1
+                flex-basis: 0
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                text-decoration: none
+                i.avatar
+                        display: inline-block
+                        height: 6.4vw
+                        width: 6.4vw
+                        background-image: url(./nav_bg.png)
+                        background-size: 100% auto
+                &:nth-child(1) i.avatar
+                        background-position: 0 0
+                &:nth-child(1).active i.avatar
+                        background-position: 0 14.2857%
+                &:nth-child(2) i.avatar
+                        background-position: 0 28.5714%
+                &:nth-child(2).active i.avatar
+                        background-position: 0 42.8571%
+                &:nth-child(3) i.avatar
+                        background-position: 0 57.1428%
+                &:nth-child(3).active i.avatar
+                        background-position: 0 71.4286%
+                &:nth-child(4) i.avatar
+                        background-position: 0 85.7142%
+                &:nth-child(4).active i.avatar
+                        background-position: 0 100%
+                span
+                        font-size: 12px
+                        color: gray
+                &.active span
+                        color: #eab151

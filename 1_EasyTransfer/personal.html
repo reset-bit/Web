@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/util.css">
+    <link rel="stylesheet" href="" id="linkid">
+    <script src="js/personal.js"></script>
+    <script src="js/href.js"></script>
+    <title>EasyTransfer-personal</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="image/personal-bg.svg" alt="" class="bg">
+            <div class="content">
+                <div class="title" onclick="goCompany()">
+                    EasyTransfer
+                </div>
+                <div class="text">
+                    想返回吗？
+                </div>
+                <div class="btn-big btn-return" onclick="goHome()" onmouseenter="addAnimation()">
+                    <img src="image/arrow/left-white.svg" alt="" id="returnArrow">
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="btn-float" onclick="changeTopic()">换肤</div>
+            <div class="item" id="basic">
+                <div class="item-title">基本信息</div>
+                <div class="item-content">
+                    <div class="item-info">
+                        <img src="image/avatar/avatar-1.svg" alt="">
+                        <div class="username">
+                            <span>Bob</span>
+                            <div class="btn-small btn-username">
+                                <img src="image/modify.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <form action="#">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="subtitle">邮箱</div>
+                                    <div>
+                                        <input type="text" value="1111111111@163.com">
+                                        <div class="btn-small add">关联邮箱</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="subtitle">密码</div>
+                                    <input type="password" value="123456">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <div class="btn-big submit">保存修改</div>
+                </div>
+            </div>
+            <div class="item" id="vip">
+                <div class="item-title">会员</div>
+                <div class="item-content">
+                    <div class="btn-big" id="becomeVip">您还不是会员，点此开通</div>
+                </div>
+            </div>
+            <div class="item" id="space">
+                <div class="item-title">空间使用</div>
+                <div class="item-content">
+                    <div class="process-bar" id="upload">
+                        <div class="used"></div>
+                        <span>上传 3.6MB/1GB</span>
+                    </div>
+                    <div class="process-bar" id="download">
+                        <div class="used"></div>
+                        <span>下载 7.2MB/1GB</span>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                Copyright © EasyTransfer 易传公司 -2021. All Rights Reserved.
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+:root {
+	--w: 1100px;
+}
+.tonglan {
+	min-width: var(--w);
+}
+.w {
+	width: var(--w);
+	margin: 0 auto;
+}
+* {
+	color: #1b1b1b;
+	font-family: siyuan,"Microsoft YaHei",sans-serif;
+}
+body {
+	font-size: 0;
+}
+
+/* 吸附工具栏 */
+.tools {
+	position: fixed;
+	right: 0;
+	bottom: 100px;
+	border: 1px solid gray;
+	border-right: none;
+	background-color: #fff;
+	z-index: 10;
+}
+.tools>a {
+	display: block;
+	box-sizing: border-box;
+	height: 100px;
+	width: 70px;
+	text-align: center;
+}
+.tools>a:nth-child(3)::before,
+.tools>a:nth-child(4)::before {
+	content: '';
+	display: block;
+	height: 1px;
+	width: 60%;
+	margin-left: 20%;
+	background-color: #D2D2D2;
+}
+.tools>a>h6 {
+	display: block;
+	font-size: 12px;
+	font-weight: 100;
+	color: gray;
+	letter-spacing: 1px;
+}

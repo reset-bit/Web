@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/util.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/home.js"></script>
+    <script src="js/href.js"></script>
+    <title>EasyTransfer-home</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="sidebar">
+            <div class="title" onclick="goCompany()">EasyTransfer</div>
+            <div class="menu-list">
+                <div class="menu-item" id="my-documents-btn" onclick="changeView(id)"><span>我的文件</span></div>
+                <div class="menu-item" id="my-friends-btn" onclick="changeView(id)"><span>我的好友</span></div>
+                <div class="menu-item" id="my-inbox-btn" onclick="changeView(id)"><span>我的收件箱</span></div>
+            </div>
+        </div>
+
+        <div class="topbar">
+            <div class="searchbar">
+                <img src="image/search.svg" alt="图片加载失败">
+                <input placeholder="搜索我的文件"></input>
+            </div>
+            <div class="about-user">
+                <div class="user-name">Bob</div>
+                <img src="image/arrow/openlist.svg" alt="" class="dropdown" onclick="controlList()">
+                <div class="dropdown-content">
+                    <div class="dropdown-item" onclick="goPersonal()">账户设置</div>
+                    <div class="dropdown-item">在线客服</div>
+                    <div class="dropdown-item" onclick="goLogin()">退出账户</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content" id="content">
+            <!-- 我的文件 -->
+            <div class="content-item" id="my-documents">
+                <div class="toolbar">
+                    <div class="tool-btn" id="upload">上传</div>
+                    <div class="tool-btn" id="download">下载</div>
+                    <div class="tool-btn" id="new">新建
+                        <div class="dropdown-content">
+                            <div class="dropdown-item">新建文件夹</div>
+                            <div class="dropdown-item">新建文件</div>
+                        </div>
+                    </div>
+                    <div class="tool-btn" id="more">...
+                        <div class="dropdown-content">
+                            <div class="dropdown-item">重命名</div>
+                            <div class="dropdown-item">移动</div>
+                            <div class="dropdown-item">删除</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table">
+                    <div class="table-header">
+                        <span id="document-header"><input type="checkbox" value="mydoc" name="allMyDoc" onclick="selectDoc(name)">文件名</span>
+                        <span id="size-header">大小</span>
+                        <span id="date-header">日期</span>
+                    </div>
+                    <div class="table-content">
+                        <div class="table-content-item">
+                            <span id="document">
+                                <input type="checkbox" value="mydoc" name="myDoc">
+                                <img src="image/filetype/document.svg" alt="图片加载失败">
+                                <span>时效文件夹</span>
+                            </span>
+                            <span id="size">3.6MB</span>
+                            <span id="date">2021-5-16</span>
+                        </div>
+                        <div class="table-content-item">
+                            <span id="document">
+                                <input type="checkbox" value="mydoc" name="myDoc">
+                                <img src="image/filetype/word.svg" alt="图片加载失败">
+                                <span>demo.word</span>
+                            </span>
+                            <span id="size">3.6MB</span>
+                            <span id="date">2021-5-16</span>
+                        </div>
+                        <div class="table-content-item">
+                            <span id="document">
+                                <input type="checkbox" value="mydoc" name="myDoc">
+                                <img src="image/filetype/ppt.svg" alt="图片加载失败">
+                                <span>demo.ppt</span>
+                            </span>
+                            <span id="size">3.6MB</span>
+                            <span id="date">2021-5-16</span>
+                        </div>
+                        <div class="table-content-item">
+                            <span id="document">
+                                <input type="checkbox" value="mydoc" name="myDoc">
+                                <img src="image/filetype/pdf.svg" alt="图片加载失败">
+                                <span>demo.pdf</span>
+                            </span>
+                            <span id="size">3.6MB</span>
+                            <span id="date">2021-5-16</span>
+                        </div>
+                        <div class="table-content-item">
+                            <span id="document">
+                                <input type="checkbox" value="mydoc" name="myDoc">
+                                <img src="image/filetype/txt.svg" alt="图片加载失败">
+                                <span>demo.txt</span>
+                            </span>
+                            <span id="size">3.6MB</span>
+                            <span id="date">2021-5-16</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 我的好友 -->
+            <div class="content-item" id="my-friends">
+                <div class="contact-list">
+                    <div class="search-contact">
+                        <input type="text" placeholder="搜索您想要联系的联系人">
+                        <img src="image/search.svg" alt="">
+                    </div>
+                    <div class="list-content">
+                        <div class="list-item" id="p1">
+                            <img src="image/avatar/avatar-1.svg" alt="">
+                            <div class="list-item-detail">
+                                <div class="contact-name">区展</div>
+                                <div class="contact-status">在线</div>
+                            </div>
+                        </div>
+                        <div class="list-item" id="p2">
+                            <img src="image/avatar/avatar-2.svg" alt="">
+                            <div class="list-item-detail">
+                                <div class="contact-name">郭君</div>
+                                <div class="contact-status">在线</div>
+                            </div>
+                        </div>
+                        <div class="list-item" id="p3">
+                            <img src="image/avatar/avatar-3.svg" alt="">
+                            <div class="list-item-detail">
+                                <div class="contact-name">段婵娟</div>
+                                <div class="contact-status">10分钟前离线</div>
+                            </div>
+                        </div>
+                        <div class="list-item" id="p4">
+                            <img src="image/avatar/avatar-4.svg" alt="">
+                            <div class="list-item-detail">
+                                <div class="contact-name">溥睿</div>
+                                <div class="contact-status">1天前离线</div>
+                            </div>
+                        </div>
+                        <div class="list-item" id="p5">
+                            <img src="image/avatar/avatar-5.svg" alt="">
+                            <div class="list-item-detail">
+                                <div class="contact-name">释雅惠</div>
+                                <div class="contact-status">离线</div>
+                            </div>
+                        </div>
+                        <div class="list-item" id="p6">
+                            <img src="image/avatar/avatar-6.svg" alt="">
+                            <div class="list-item-detail">
+                                <div class="contact-name">用磊</div>
+                                <div class="contact-status">离线</div>
+                            </div>
+                        </div>
+                        <div class="list-item" id="more">
+                            ……点击添加好友
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-detail-ori" id="contact-detail-ori"></div>
+                <div class="contact-detail" id="contact-detail">
+                    <div class="contact-detail-topbar">
+                        <img src="image/avatar/avatar-1.svg" alt="">
+                        <div class="topbar-detail">
+                            <div class="topbar-name">区展</div>
+                            <div class="topbar-other">1111111111@qq.com</div>
+                        </div>
+                    </div>
+                    <div class="contact-detail-window">
+                        <div class="detail-item">
+                            <div class="document-detial"></div>
+                        </div>
+                    </div>
+                    <div class="contact-detail-sender">
+                        <div class="sender-btn">分享文件</div>
+                        <div class="sender-dropdown">
+                            <img src="image/arrow/openlist.svg" alt="">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">删除好友</div>
+                                <div class="dropdown-item">加入黑名单</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 我的收件箱 -->
+            <div class="content-item" id="my-inbox">
+                <div class="toolbar">
+                    <div class="tool-btn" id="upload">下载</div>
+                    <div class="tool-btn" id="delete" onclick="javaScript:alert('您确定要删除吗？');">删除</div>
+                </div>
+                <div class="table">
+                    <div class="table-header">
+                        <span id="sender-header"><input type="checkbox" value="recdoc" name="allRecDoc" onclick="selectDoc(name)">发件人</span>
+                        <span id="received-file-header">文件</span>
+                        <span id="received-date-header">接收日期</span>
+                    </div>
+                    <div class="table-content">
+                        <div class="table-content-item">
+                            <span id="sender"><input type="checkbox" value="recdoc" name="recDoc">区展</span>
+                            <span id="received-file">demo.pdf</span>
+                            <span id="received-date">2021-5-16</span>
+                        </div>
+                        <div class="table-content-item">
+                            <span id="sender"><input type="checkbox" value="recdoc" name="recDoc">1234567890@163.com</span>
+                            <span id="received-file">报名表.xlsx</span>
+                            <span id="received-date">2021-5-16</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

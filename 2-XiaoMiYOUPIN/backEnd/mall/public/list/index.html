@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="/assets/css/reset.css"/>
+		<link rel="stylesheet" href="/assets/css/public.css"/>
+		<link rel="stylesheet" href="/assets/font/iconfont.css">
+		<link rel="stylesheet" href="index.css"/>
+		<script>
+			window.PointerEvent = false;
+		</script>
+		<title>有品</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="default-header-wrapper active">
+				<div class="default-header">
+					<a href="/category/index.html"><i class="iconfont icon-back"></i></a>
+					<span class="title"></span>
+					<i class="iconfont icon-search"></i>
+				</div>
+				<div class="category-wrapper">
+					<ul class="category"></ul>
+				</div>
+			</div>
+			<div class="result-header">
+				<a href="/category/index.html"><i class="iconfont icon-back"></i></a>
+				<input type="text" class="header-search">
+			</div>
+			<div class="order-wrapper">
+				<span data-col="price" class="active asc">价格<i class="iconfont icon-sort_asc"></i></span>
+				<span data-col="sale" class="desc">销量</span>
+				<span data-col="rate" class="desc">好评</span>
+			</div>
+			<div class="content-wrapper">
+				<div class="content">
+					<ul class="list"></ul>
+					<p class="tip"></p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="search-module">
+			<div class="module-header">
+				<i class="iconfont icon-back"></i>
+				<div class="search-area">
+					<i class="iconfont icon-search"></i>
+					<div class="input-wrapper">
+						<input type="text" class="module-search">
+						<div class="search-list-wrapper">
+							<ul class="search-list">
+								<li data-pid='1' class="active">小米电视4A 55英寸</li>
+								<li data-pid='2'>小米电视4C 32英寸</li>
+								<li data-pid='11'>Redmi 智能电视 X50</li>
+								<li data-pid='1'>小米电视4A 55英寸</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<span class="btn-search">搜索</span>
+			</div>
+			<div class="module-content-wrapper">
+				<div class="content-title">搜索发现</div>
+				<div class="module-content">
+					<span>小米电视4A 55英寸</span><span>小米电视4C 32英寸</span><span>Redmi 智能电视 X50</span>
+				</div>
+				<img src="../images/search-avatar.jpg" alt="">
+			</div>
+		</div>
+		
+		<script src="/assets/js/jQuery-1.8.2.js"></script>
+		<script src="/assets/js/jquery.query.js"></script>
+		<script src="/assets/js/imagesloaded.js"></script>
+		<script src="/assets/js/iscroll-probe.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>

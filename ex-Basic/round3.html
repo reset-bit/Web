@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="utf-8">
+		<title>天道好轮回，苍天饶过谁</title>
+		<!--
+			终于轮到我title胖虎，an的名字不会被显示在网页文本区
+			but定义了浏览器中工具栏的标题/收藏书签的标题/显示在搜索引擎内的标题
+			
+			下面的base小弟/link小弟，分别为页面上的所有链接规定默认地址或默认目标/连接外部文档（css）
+			meta元数据标签，规定页面的描述/作者/最后修改时间等信息
+		-->
+		<base href="round1.html" >
+		<base target="_blank">
+		<style type="text/css">
+			p{color:seagreen;background:pink}
+		</style>
+		<meta name="description" content="just during learning">
+		<meta name="author" content="reset">
+	</head>
+	
+	<body>
+		<iframe src="round1.html" height="600" width="500" frameborder="0" name="round1"></iframe>
+		<p>
+			有些老式浏览器不支持内敛框架嗷,frameboeder=0无边框<br/>
+			<a href="http://www.baidu.com/" target="round1">点我就有内嵌框架的百度啦，牛掰</a>
+		</p>
+		
+		<script type="text/javascript">
+			//<!--
+				console.log("yes");
+			//-->
+		</script>
+		<!--部分老式浏览器会将script标签中内容以文本的形式显示出来，加在注释标签中可以有效避免这个问题-->
+		<noscript>垃圾浏览器不支持script标签(也可能是你禁用标签了)</noscript>
+	</body>
+	<!--
+		……搞了半天多搜就是这么easy？？？哇咔咔咔，有被笑到
+		frameset标签不能和head/body等一起使用嗷
+		框架标签的坏处：开发人员必须同时跟踪更多的html文档；很难 打印整个页面
+	-->
+	
+	<!--
+	<frameset cols="50%,50%">
+		<frame src="round1.html">
+		<frame src="round2.html" noresize="noresize">
+		框架与框架依旧可以套娃，默认是可以调整大小的，noresize保持不可以
+	</frameset>
+	<noframes>
+		<body>垃圾浏览器显示不了框架嗷，噗哈哈哈</body>
+	</noframes>
+	
+	<frameset cols="120,*">
+		<frame src="round3.html">
+		<frame src="round1.html" name="showframe">
+	</frameset>
+	-->
+	
+	<!--
+		文件存放路径：
+			绝对文件路径：指向一个因特网文件的完整URL，如https://www.w3school.com.cn/images/picture.jpg
+			相对文件路径：指向相对于当前页面的文件
+				<img src="picture.jpg">	picture.jpg 位于与当前网页相同的文件夹
+				<img src="images/picture.jpg">	picture.jpg 位于当前文件夹的 images 文件夹中
+				<img src="/images/picture.jpg">	picture.jpg 当前站点根目录的 images 文件夹中
+				<img src="../picture.jpg">	picture.jpg 位于当前文件夹的上一级文件夹中
+			使用相对路径是个好习惯~~
+	-->
+	
+	<!--URL:统一资源定位符，你猜他也叫什么？？网址……
+		scheme://host.domain:port/path/filename
+		scheme - 定义因特网服务的类型。最常见的类型是 http
+		host - 定义域主机（http 的默认主机是 www）
+		domain - 定义因特网域名，比如 w3school.com.cn
+		port - 定义主机上的端口号（http 的默认端口号是 80）
+		path - 定义服务器上的路径（如果省略，则文档必须位于网站的根目录中）。
+		filename - 定义文档/资源的名称
+	-->
+</html>

@@ -1,0 +1,185 @@
+/* header */
+ul.header-menu-left, ul.header-menu-right {
+	display: inline-block;
+}
+.header-menu-left-wrapper>img {
+	display: inline-block;
+}
+
+.container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/login-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: all .2s;
+}
+.wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 470px;
+	width: 465px;
+	box-sizing: border-box;
+	background-color: #fff;
+	padding: 70px 70px 0;
+	text-align: center;
+	opacity: 0;
+	z-index: 0;
+	transition: all .4s;
+}
+.wrapper.active {
+	opacity: 1;
+	z-index: 1;
+}
+
+/* 登录 */
+.type {
+	font-size: 0;
+	margin-bottom: 50px;
+}
+.type>div {
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+}
+.type>div>span {
+	font-size: 20px;
+	font-weight: 600;
+	color: gray;
+	cursor: pointer;
+}
+.login-type.active>span {
+	color: #333333;
+}
+.login-type.quick {
+	position: relative;
+}
+.login-type.quick::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 2px;
+	background-color: #D2D2D2;
+}
+.login-type.active{
+	color: #333333;
+}
+.input-bar-wrapper {
+	display: none;
+}
+.input-bar-wrapper.active {
+	display: block;
+}
+.input-bar {
+	text-align: center;
+	display: flex;
+	/* 默认垂直交叉轴 */
+	align-items: flex-end;
+}
+input {
+	flex: 1;
+	border: none;
+	border-bottom: 1px solid #D2D2D2;
+	padding: 24px 10px;
+	font-size: 15px;
+}
+input:placeholder-shown {
+	font-size: 15px;
+	color: #D2D2D2;
+}
+span.btn-code {
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	padding: 6px 12px;
+	margin-left: 12px;
+	background-color: #d2d2d2;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+.big-btn {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #D2D2D2;
+	color: #fff;
+	margin-top: 40px;
+	cursor: pointer;
+}
+.big-btn.active {
+	background-color: #313131;
+}
+.tool {
+	display: none;
+}
+.tool.active {
+	display: block;
+	text-align: center;
+}
+.tool.pwd {
+	display: flex;
+	justify-content: space-between;
+}
+a.miss-pwd, a.wechat-login {
+	display: inline-block;
+	padding: 20px 0;
+	color: gray;
+	font-size: 14px;
+}
+.tool.pwd>a {
+	padding: 10px 0;
+}
+.about-account {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	background-color: whitesmoke;
+	font-size: 14px;
+	color: #ababab;
+	text-align: center;
+}
+span.go-register {
+	color: #333333;
+	cursor: pointer;
+}
+
+/* 注册 */
+.wrapper.register {
+	position: relative;
+	padding-top: 80px;
+}
+span.go-login {
+	position: absolute;
+	top: 25px;
+	left: 30px;
+	width: 20px;
+	height: 20px;
+	background-image: url(../images/sprite-1.png);
+	background-position: -422px -20px;
+	cursor: pointer;
+}
+.title {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 40px;
+}
+.attention {
+	padding: 20px 0;
+	color: gray;
+	font-size: 14px;
+}
+.attention>a {
+	color: #333333;
+}

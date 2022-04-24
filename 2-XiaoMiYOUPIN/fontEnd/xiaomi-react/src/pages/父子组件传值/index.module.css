@@ -1,0 +1,4 @@
+/* 命名为.module.css限定模块化css */
+.container { color: yellowgreen }
+/* 使用标签名选择器，在前面加class限定，否则会发生样式混淆 */
+/*.container span { background-color: gray; }*/

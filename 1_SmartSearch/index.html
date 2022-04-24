@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>three.js canvas - particles - waves</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/three.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <script src="js/background.js"></script>
+    <div class="container" id="container">
+        <div class="avatar-area content-center" id="avatar-area">
+            <div class="avatar-bg" id="bg-outer"></div>
+            <div class="avatar-bg" id="bg-middle"></div>
+            <div class="avatar-bg" id="bg-main"></div>
+            <div class="avatar-dec" id="dec-red"></div>
+            <div class="avatar-dec" id="dec-green"></div>
+            <div class="avatar-dec" id="dec-blue"></div>
+        </div>
+        <div class="tools">
+            <div class="default content-center"><span></span></div>
+            <div class="tool" id="login" onclick="login()">登录</div>
+            <div class="tool" id="exit" onclick="exit()">退出</div>
+            <div class="tool" id="settings" onclick="settings()">设置</div>
+        </div>
+        <div class="chat-area" id="chat-area">
+            <div class="chat-bar left content-center">text</div>
+            <div class="chat-bar right content-center">a</div>
+        </div>
+        <div class="btn content-center btn-begin" id="init" onclick="chatInit()">
+            <div class="content-center" id="init-text">开始</div>
+            <form action="#" name="from">
+                <input type="text" id="data" name="data" placeholder="请在此输入内容" onblur="concelChatInit()">
+                <div class="btn-small content-center" id="submit" onclick="beginChat()">发送</div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

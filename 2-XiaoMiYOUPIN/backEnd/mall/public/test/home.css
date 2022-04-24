@@ -1,0 +1,12 @@
+.banner {
+	height: 200px;
+}
+
+.form-item-group {
+	padding: 10px;
+}
+input {
+	height: 45px;
+	width: 100%;
+	border-bottom: 1px solid black;
+}

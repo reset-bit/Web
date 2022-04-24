@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="/plugins/layer/mobile/need/layer.css">
+		<link rel="stylesheet" href="/assets/css/reset.css"/>
+		<link rel="stylesheet" href="/assets/css/public.css"/>
+		<link rel="stylesheet" href="/assets/font/iconfont.css">
+		<link rel="stylesheet" href="index.css"/>
+		<title>有品</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<i class="iconfont icon-back"></i>
+				<span class="title">购物车</span>
+				<span class="option">编辑</span>
+			</div>
+			<div class="content-wrapper">
+				<img src="../images/cart_header_bg.png" alt="">
+				
+				<div class="default-wrapper">
+					<img src="/images/no_result_cart.png" alt="">
+					<p class="tip">登录后才能看到商品哦</p>
+					<span class="btn-login" href="/login/index.html">立即登录<span>
+				</div>
+				
+				<div class="empty-wrapper">
+					<img src="/images/no_result_cart.png" alt="">
+					<p class="tip">目前没有添加商品哦</p>
+					<a class="btn-home" href="/home/index.html">去首页逛逛</a>
+				</div>
+				
+				<div class="content">
+					<ul class="list"></ul>
+					<div class="bottom-bar">
+						<span class="left"><i class="checkbox all"></i>全选</span>
+						<span class="right"><span class="total-price-wrapper">合计：<span class="total-wrapper">￥<span class="total">0</span>.00</span></span><span class="btn-option">结算</span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="/assets/js/jQuery-1.8.2.js"></script>
+		<script src="/assets/js/js-cookie.js"></script>
+		<script src="/plugins/layer/mobile/layer.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>

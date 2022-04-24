@@ -1,0 +1,301 @@
+.container {
+    color: whitesmoke;
+}
+
+.left {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    background: #1E1E1E;
+}
+
+.left .bg {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 30%;
+}
+
+.left .content {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 80px;
+}
+
+.left .content .title {
+    font-size: 26px;
+    font-weight: 300;
+    margin: 10px;
+    position: relative;
+    animation: appear 1s forwards;
+    cursor: pointer;
+}
+
+.left .content .text {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 10px;
+}
+
+.btn-big {
+    width: auto;
+    min-width: 130px;
+    height: 30px;
+    background-color: #3296FA;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn-big img {
+    width: 26px;
+    height: 26px;
+    position: relative;
+}
+
+@keyframes goback {
+    0% {
+        opacity: 0;
+        left: 0px;
+    }
+    50% {
+        opacity: 1;
+        left: -6px;
+    }
+    100% {
+        opacity: 0;
+        left: 0px;
+    }
+}
+
+.right {
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 300px;
+    background: #292a2d;
+}
+
+.right .btn-float {
+    width: 40px;
+    height: 30px;
+    background: #1E1E1E;
+    border-radius: 10px;
+    color: grey;
+    font-size: 12px;
+    position: absolute;
+    top: 2%;
+    right: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.right .item {
+    width: 90%;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right .item .item-title {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 30px 0px 10px 10px
+}
+
+.right .item .item-content {
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    flex: 1;
+    background: grey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    animation: appear 1s forwards;
+}
+
+.item-content .item-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.item-content .item-info img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.item-content .item-info .username {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.item-content .item-info .username span {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 10px;
+}
+
+.btn-small {
+    width: 70px;
+    height: 30px;
+    background: #292a2d;
+    border-radius: 10px;
+    color: gray;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.item-content .item-info .username .btn-username {
+    width: 30px;
+    height: 30px;
+}
+
+.item-content .item-info .username .btn-username img {
+    width: 20px;
+    height: 20px;
+}
+
+.item-content form {
+    margin-left: 30px;
+}
+
+.item-content form table {
+    width: 100%;
+}
+
+.item-content form table tr td {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.item-content form table tr td .subtitle {
+    font-size: 12px;
+    font-weight: 300;
+    margin: 10px;
+    color: #292a2d;
+}
+
+.item-content form table tr div {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-content form table tr td input {
+    width: 60%;
+    height: 40px;
+    margin-left: 10px;
+    border: none;
+    border-bottom: 1px solid grey;
+    border-radius: 10px;
+    background: #292a2d;
+    color: gray;
+    padding-left: 4px;
+}
+
+.item-content .submit {
+    width: 30%;
+    margin-top: 40px;
+    position: relative;
+    left: 35%;
+    bottom: 20px;
+}
+
+.right #vip .item-content {
+    align-items: center;
+    justify-content: center;
+}
+
+.right #vip .item-content .btn-big {
+    width: 200px;
+}
+
+.right #space .item-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right #space .item-content .process-bar {
+    width: 80%;
+    height: 20px;
+    background: #292a2d;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 12px;
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.right #space .item-content .process-bar .used {
+    height: 20px;
+    border-radius: 5px;
+}
+
+@keyframes used-processbar {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.right #space .item-content #upload .used {
+    width: 2%;
+    background: #3296FA;
+}
+
+.right #space .item-content #download .used {
+    width: 4%;
+    background: #F7DF5C;
+}
+
+.right #space .item-content .process-bar span {
+    position: absolute;
+    right: 10%;
+    z-index: 10;
+}
+
+footer {
+    background: #1E1E1E;
+}

@@ -1,0 +1,22 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Tahoma","黑体";
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+input {
+	border: none;
+	outline: none;
+}
+.clearfix:after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	clear: both;
+}

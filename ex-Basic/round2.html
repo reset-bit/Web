@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>第二个网页</title>
+		<style type="text/css">
+			h1{color:greenyellow}
+			p{color:balck}
+			.cities{
+				background-color:black;
+				color:white;
+				margin:20px;
+				padding:20px;
+			} 
+			.zi{
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 style="text-align:center">这是第二个网页</h1>
+		<p>在这会涉及到一点点css嗷，用在head标签里</p><br/>
+		<a href="www.taobao.com" style="text-decoration:none">这次不是百度啦</a><br/>
+		<!--
+			关于样式：还是等到css具体介绍
+				外部样式适用于  需要应用样式到很多页面的场景，使用一个文件即可更改---<head>中link标签
+				内部样式适用于  某个文件需要特别样式的场景---<head>中style标签（上面有示例哦）
+				内联样式适用于  单个需要特别样式的场景---单个标签中的style属性（也有示例）
+		-->
+		<p>
+			好的我发现p标签可以自动换行的，那我还加换行干嘛……<br/>hhh这是图片标签：
+			<a name="123" href="http://www.microsoft.com/" target="_blank">
+				<img border="0" src="E:\A 工作文件\活动\三创\for_u\95573bdcc0d4911.jpg" height="50" width="50" align="top"/>
+			</a>
+			<!--有一说一，src属性支持跳转html,target_blank就可以在新标签打开啦-->
+			<br/>
+			<a href="#123">我是跳转的连接</a><hr/>
+			<a href="http://taobao.com/" target="_blank">这是实验的连接1：blank</a><br/>
+			<a href="http://taobao.com/" target="_parent">这是实验的连接2：parent</a><br/>
+			<a href="http://taobao.com/" target="_search">这是实验的连接3：search</a><br/>
+			<a href="http://taobao.com/" target="_self">这是实验的连接4：self</a><br/>
+			<a href="http://taobao.com/" target="_top">这是实验的连接5：top</a><br/>
+			<hr/>
+			<!--
+				blank：在新窗口中打开					parent：在父框架中打开
+				search：在浏览器的搜索区打开（仅对IE5或更高版本）
+				self：无意义，在相同框架中打开			top：在整个窗口中打开
+			-->
+		</p1>
+		
+		<table border="1" cellpadding="5" cellspacing="5">
+		<!--boeder外框宽度/cellpadding单元格边距/cellspacing单元格间距-->
+			<th colspan="3" bgcolor="aliceblue">电话查询</th>
+			<!--colspan横跨单元格数/rowspan纵跨单元格数-->
+			<tr>
+				<td>10086</td>
+				<td>10010</td>
+				<td>
+					<ul>
+						<li>或许这是一个列表？？1</li>
+						<li>这的确是一个列表！！2</li>
+						<ul>
+							<li>表套表，禁止套娃！！3</li>
+						</ul>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp</td>
+				<!--html中预留字符需要被安排为字符实体，建议查表……^-^-->
+				<td>110</td>
+				<td align="right">120</td>
+			</tr>
+		</table>
+		
+		<table frame="box">
+			<th align="center" colspan="2">这是一个<span class="zi">没什么特殊的</span>新表<th>
+			<tr>
+				<td>23233323</td>
+				<td>56565666</td>
+			</tr>
+			<tr>
+				<td>
+					<ol start="30">
+						<li>不想要下一个标号</li>
+						<li>成就达成！</li>
+					</ol>
+				</td>
+				<td>aoaoa</td>
+			</tr>
+		</table>
+		
+		<div class="cities"><!--div块级元素，搭配css食用更香-->
+			<h2>London</h2>
+			<p>
+			London is the capital city of England. 
+			It is the most populous city in the United Kingdom, 
+			with a metropolitan area of over 13 million inhabitants.
+			</p>
+		</div>
+		<div class="cities">
+			<h2>Tokyo</h2>
+			<p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+			and the most populous metropolitan area in the world.</p>
+			</div>
+		</div>
+		
+		
+	</body>
+</html>

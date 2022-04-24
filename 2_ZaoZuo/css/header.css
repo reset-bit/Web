@@ -1,0 +1,173 @@
+/* 顶部菜单栏 */
+.header {
+	height: 50px;
+	position: relative;
+}
+.header-menu-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0px;
+	box-sizing: border-box;
+	padding: 0 50px;
+	background-color: #313131;
+	font-size: 0;
+	text-align: justify;
+	z-index: 20;
+	transition: all .3s;
+}
+.header-menu-wrapper.fixed {
+	height: 50px;
+}
+.header-menu-wrapper.fixed ul.header-menu-left,
+.header-menu-wrapper.fixed ul.header-menu-right{
+	display: inline-block;
+}
+.header-menu-wrapper.fixed .header-menu-left-wrapper>img {
+	display: inline-block;
+}
+.header-menu-wrapper::after {
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+/* 
+	使用height配合transition形成header动画，需要隐藏内部ul
+*/
+.header-menu-wrapper ul {
+	display: none;
+}
+.header-menu-wrapper li {
+	display: inline-block;
+}
+.header-menu-wrapper li>a {
+	display: block;
+	box-sizing: border-box;
+	height: 50px;
+	line-height: 50px;
+}
+.header-menu-wrapper span {
+	box-sizing: border-box;
+	padding: 12px 0;
+	font-size: 14px;
+	color: #e0e0e0;
+}
+.header-menu-wrapper li:hover span {
+	border-bottom: 1px solid #fff;
+}
+.header-menu-wrapper li:hover ul.sub-menu {
+	display: block;
+}
+.header-menu-left-wrapper {
+	display: inline-block;
+	vertical-align: top;
+}
+.header-menu-left-wrapper>img {
+	display: none;
+	width: 25px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+ul.header-menu-left {
+	vertical-align: middle;
+}
+ul.header-menu-left>li {
+	vertical-align: top;
+}
+ul.header-menu-left>li>a {
+	padding-left: 20px;
+}
+.header-menu-right-wrapper {
+	display: inline-block;
+	vertical-align: top;
+}
+ul.header-menu-right {}
+ul.header-menu-right>li {
+	vertical-align: top;
+	position: relative;
+}
+ul.header-menu-right>li>a {
+	vertical-align: top;
+	margin: 0 10px;
+}
+ul.header-menu-right>li>a::before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+ul.header-menu-right>li>a img {
+	height: 26px;
+	width: 26px;
+	vertical-align: middle;
+}
+/* 二级菜单背板 */
+.header-menu-wrapper .sub-bg {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background-color: #464646;
+	transition: all .3s;
+	z-index: -10;
+	opacity: 0;
+	pointer-events: none;
+}
+.header-menu-wrapper .sub-bg.active {
+	z-index: 20;
+	opacity: 1;
+	pointer-events: auto;
+}
+/* 二级菜单 */
+ul.sub-menu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%, 0);
+	z-index: 30;
+	text-align: center;
+}
+ul.sub-menu>li {
+	display: inline-block;
+}
+ul.sub-menu>li>a {
+	height: 50px;
+	line-height: 50px;
+	margin: 0 20px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #aaa;
+	font-weight: bolder;
+	transition: all .3s;
+}
+.header-menu-wrapper ul.sub-menu>li>a:hover {
+	color: #fff;
+}
+/* 个人中心二级菜单 */
+ul.header-menu-right>li:nth-child(4):hover .personal-sub-menu {
+	display: block;
+}
+ul.header-menu-right .personal-sub-menu {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: -50%;
+	width: 200%;
+	background-color: #313131;
+	z-index: 30;
+}
+ul.header-menu-right .personal-sub-menu>a {
+	display: block;
+	padding: 10px 0;
+	font-size: 12px;
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+}
+ul.header-menu-right .personal-sub-menu>a:hover {
+	background-color: #111;
+}

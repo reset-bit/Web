@@ -1,0 +1,128 @@
+.container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.content {
+	flex-grow: 1;
+	background-color: #eee;
+	overflow: auto;
+}
+.content::-webkit-scrollbar {
+	display: none;
+}
+i {
+	color: #aaa;
+}
+
+.user-wrapper {
+	display: flex;
+	align-items: center;
+	height: 26.6vw;
+	box-sizing: border-box;
+	padding: 20px;
+	background-color: #8c5d3e;
+}
+.user-wrapper>img {
+	height: 16vw;
+}
+.name-default-wrapper {
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-between;
+	padding-left: 16px;
+}
+.name-default-wrapper>span, .name-wrapper>span {
+	font-size: 16px;
+	color: #fff;
+}
+.name-wrapper {
+	display: none;
+}
+.user-wrapper.alreadyLogged .name-wrapper{
+	display: flex;
+	flex-grow: 1;
+	padding-left: 16px;
+}
+.user-wrapper.alreadyLogged .name-default-wrapper {
+	display: none;
+}
+
+a.order {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 10.9vw;
+	box-sizing: border-box;
+	margin: 4px 0;
+	padding: 0 20px;
+	background-color: #fff;
+}
+a.order>span {
+	font-size: 15px;
+	color: gray;
+}
+.btn-wrapper {
+	height: 18.4vw;
+	display: flex;
+	background-color: #fff;
+}
+.btn-wrapper>a {
+	flex-grow: 1;
+	flex-basis: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.btn-wrapper>a>img {
+	height: 10.7vw;
+}
+.btn-wrapper>a>span {
+	font-size: 14px;
+	color: gray;
+}
+.main-part-1 {
+	margin: 4px 0;
+}
+a.item-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 13.3vw;
+	box-sizing: border-box;
+	padding: 0 20px;
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+}
+a.item-bar>span {
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+	color: gray;
+}
+a.item-bar>span>img {
+	height: 10.6vw;
+}
+.border-1px::after {
+	border: none;
+	border-bottom: 1px solid gray;
+}
+
+.btn-exit-wrapper {
+	display: none;
+	text-align: center;
+}
+.btn-exit-wrapper.active {
+	display: block;
+}
+span.btn-exit {
+	display: inline-block;
+	margin-top: 6px;
+	padding: 10px 40px;
+	border: 1px solid gray;
+	border-radius: 4px;
+	background-color: #fff;
+	color: gray;
+	font-size: 12px;
+}

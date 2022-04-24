@@ -1,0 +1,53 @@
+.container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.header {
+	height: 11.7vw;
+	flex-shrink: 0;
+}
+.order-wrapper {
+	display: flex;
+	flex-shrink: 0;
+}
+.order-wrapper>span {
+	height: 9.6vw;
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.order-wrapper>span.asc {
+	color: skyblue;
+}
+.order-wrapper>span.desc {
+	color: yellowgreen;
+}
+.order-wrapper>span.active {
+	color: #000000;
+	font-weight: bolder;
+	text-decoration: underline;
+}
+
+.content {
+	flex-grow: 1;
+	overflow: hidden;
+	/* 设置触摸屏用户如何操纵元素的区域。pan-y为启用【单指垂直平移】手势 */
+	touch-action: pan-y;
+}
+ul.list>li>a {
+	display: flex;
+	flex-direction: row;
+	color: #000;
+}
+ul.list>li img {
+	width: 33.6vw;
+	flex-shrink: 0;
+}
+p.tip {
+	line-height: 60px;
+	text-align: center;
+	color: gray;
+	font-size: 14px;
+}

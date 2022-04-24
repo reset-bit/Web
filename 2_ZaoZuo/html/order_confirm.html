@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/public.css">
+		<link rel="stylesheet" href="../css/header.css">
+		<link rel="stylesheet" href="../css/order_confirm.css">
+		<title>订单确认-造作新家官网</title>
+	</head>
+	<body>
+		<!-- 导航栏 -->
+		<div class="tonglan header">
+			<div class="header-menu-wrapper fixed">
+				<div class="header-menu-left-wrapper">
+					<img src="../images/logo.png" alt="">
+					<ul class="header-menu-left">
+						<li data-id=0><a href="home.html"><span>首页</span></a></li>
+						<li data-id=1><a href=""><span>21年新品</span></a></li>
+						<li data-id=2><a href=""><span>全屋系列</span></a><ul class="sub-menu"></ul></li>
+						<li data-id=3><a href=""><span>沙发·椅凳</span></a><ul class="sub-menu"></ul></li>
+						<li data-id=4><a href=""><span>柜架</span></a><ul class="sub-menu"></ul></li>
+						<li data-id=5><a href="list.html"><span>桌几</span></a><ul class="sub-menu"></ul></li>
+						<li data-id=6><a href=""><span>床·床具</span></a><ul class="sub-menu"></ul></li>
+						<li data-id=7><a href=""><span>灯具</span></a><ul class="sub-menu"></ul></li>
+						<li data-id=8><a href=""><span>家纺·床品</span></a><ul class="sub-menu"></ul></li>
+						<li data-id=9><a href=""><span>装饰·收纳</span></a><ul class="sub-menu"></ul></li>
+						<li data-id=10><a href=""><span>餐具·水具</span></a><ul class="sub-menu"></ul></li>
+					</ul>
+				</div>
+				<div class="header-menu-right-wrapper">
+					<ul class="header-menu-right">
+						<li><a href=""><span>实体店</span></a></li>
+						<li><a href=""><span>了解造作新家</span></a></li>
+						<li><a href=""><span>商业合作</span></a></li>
+						<li>
+							<a href="proflie.html"><span><img id="headerPersonal" src="../images/personal-1.png" alt=""></span></a>
+							<div class="personal-sub-menu">
+								<a href="">会员中心</a>
+								<a href="">我的订单</a>
+								<a href="">我的优惠券&礼品卡</a>
+								<a href="">我的消息</a>
+								<a href="">我的晒单</a>
+								<a href="proflie.html">我的资料</a>
+								<a href="">我的收藏</a>
+								<a href="javascript:void(0)" class="btn-exit">退出账号</a>
+							</div>
+						</li>
+						<li><a href="cart.html"><span><img id="headerShoppingCart" src="../images/shoppingcart-2.png" alt=""></span></a></li>
+					</ul>
+				</div>
+				<div class="sub-bg"></div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="address">
+				<div class="w clearfix">
+					<span class="sub-title">收货地址</span>
+					<div class="address-item-wrapper">
+						<div class="btn-add">
+							<span>+</span><span>添加收货地址</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="commodity">
+				<div class="w">
+					<span class="sub-title">商品清单</span>
+					<div class="commodity-bar">
+						<span class="bar-title">单品</span>
+						<div class="divider"></div>
+						<div class="commodity-item">
+							<div class="left">
+								<a href="detail.html"><img class="avatar" src="../images/detail-1-color-1.jpg"></a>
+								<div class="goods"><a href=""></a><h6 class="name">随形桌<sup>&reg;</sup></h6><span class="type">茜红</span></div>
+							</div>
+							<div class="right">
+								<span class="time">预计2021-08-23前发货</span>
+								<span class="price">￥2999</span>
+								<span class="count">×1</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="note">
+				<div class="w">
+					<span class="sub-title">发票信息</span>
+					<div class="bill"><span class="checkbox btn-bill"></span>我要开发票</div>
+					<span class="sub-title">订单备注</span>
+					<textarea class="note-area" placeholder="在此处添加备注"></textarea>
+				</div>
+			</div>
+			<div class="price">
+				<div class="w clearfix">
+					<div class="price-content">
+						<p>
+							<span>商品合计</span>
+							<span>￥2999</span>
+						</p>
+						<p>
+							<span>活动抵扣</span>
+							<span>无</span>
+						</p>
+						<p>
+							<span>运费</span>
+							<span>免邮</span>
+						</p>
+						<p>
+							<span>实付</span>
+							<span>￥2999</span>
+						</p>
+						<p><span class="checkbox btn-protocol checked"></span>我已同意<a href="">《造作物流及售后协议》</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="bottom-bar-wrapper">
+				<div class="tonglan bottom-bar">
+					<div class="w">
+						<div class="left">
+							<span class="left-title">寄送至：</span>
+							<span class="bottom-address">
+								<div><span class="name"></span><span class="phone"></span><p class="region"></p></div>
+								<p class="detail"></p>
+							</span>
+						</div>
+						<div class="right">
+							<div class="btn-place-order">结算</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 页脚 -->
+		<iframe src="footer.html" width="100%" height="550px" frameborder="0"></iframe>
+		
+		<!-- 收货地址模态框 -->
+		<div class="edit-address-module-wrapper">
+			<div class="edit-address-module">
+				<form action="" name="edit-module">
+					<div class="form-item">
+						<h6><span class="module-type">添加</span>收货地址</h6>
+						<select class="region-province"></select>
+						<select class="region-city"></select>
+						<select class="region-area"></select>
+						<select class="region-street"></select>
+						<input class="detail" type="text" placeholder="详细地址" name="receiveDetail">
+					</div>
+					<div class="form-item">
+						<h6><span class="module-type">添加</span>收货人信息</h6>
+						<input type="text" placeholder="收货人姓名" class="name" name="receiveName">
+						<input type="text" placeholder="收货人手机号码" class="phone" name="receivePhone">
+						<div class="module-default"><span class="checkbox btn-default"></span>设为默认地址</div>
+					</div>
+					<div class="btn-save">保存并使用</div>
+					<div class="btn-cancel"></div>
+				</form>
+			</div>
+		</div>
+		
+		<!-- 发票模态框 -->
+		<div class="bill-module-wrapper">
+			<div class="bill-module">
+				<h6>发票信息</h6>
+				<div class="bill-item">
+					<span>发票类型</span>
+					<span><span class="radio checked"></span>普通发票</span>
+					<span><span class="radio"></span>专用发票</span>
+				</div>
+				<div class="bill-item">
+					<span>发票抬头</span>
+					<span><span class="radio checked"></span>个人</span>
+					<span><span class="radio"></span>单位</span>
+				</div>
+				<div class="bill-item">
+					<span>发票内容</span>
+					<span class="bill-content">商品明细</span>
+				</div>
+				<ul class="remark">
+					<li>发票会在商品发货后15-30个工作日单独寄出</li>
+					<li>购买新家卡时只可开具普通发票，发票内容为预付卡销售和充值</li>
+					<li>开票金额为订单实际支付金额，不含新家卡抵扣金额</li>
+				</ul>
+				<span class="btn-save">确认保存</span>
+				<span class="btn-close"></span>
+			</div>
+		</div>
+		
+		<script src="../js/regions.js"></script>
+		<script src="../js/regions_picker.js"></script>
+		<script src="../js/js-cookie.js"></script>
+		<script src="../js/header.js"></script>
+		<script src="../js/public_private_page.js"></script>
+		<script src="../js/order_confirm.js"></script>
+	</body>
+</html>

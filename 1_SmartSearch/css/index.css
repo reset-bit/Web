@@ -1,0 +1,585 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Miscrosoft yehei";
+    color: #333333;
+}
+
+
+/* -----utils----- */
+
+.content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes occur {
+    from {
+        top: 23%;
+    }
+    to {
+        top: 20%;
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    from {
+        top: 20%;
+        opacity: 0.8;
+    }
+    to {
+        top: 17%;
+        opacity: 0;
+    }
+}
+
+@keyframes attention {
+    from {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.6;
+    }
+}
+
+
+/* -----utils----- */
+
+body {
+    background-color: whitesmoke;
+    filter: progid: DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#003073', endColorstr='#029797');
+    background-size: 100%;
+    /* background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0, #003073), color-stop(100%, #029797));
+            background-image: -webkit-linear-gradient(135deg, #003073, #029797);
+            background-image: -moz-linear-gradient(45deg, #003073, #029797);
+            background-image: -ms-linear-gradient(45deg, #003073 0, #029797 100%);
+            background-image: -o-linear-gradient(45deg, #003073, #029797); */
+    background-image: linear-gradient(180deg, whitesmoke, #8470FF);
+    text-align: center;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+
+/* avatar */
+
+.avatar-area {
+    width: 120px;
+    height: 120px;
+    z-index: 100;
+    position: absolute;
+    top: 30%;
+    transition: all 1s ease-out;
+}
+
+.acti-avatar-area {
+    width: 80px;
+    height: 80px;
+    top: 5%;
+    left: 5%;
+}
+
+.avatar-area .avatar-bg {
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+}
+
+.avatar-area #bg-outer {
+    border: 1px solid whitesmoke;
+    animation: wave-outer 2s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes wave-outer {
+    from {
+        width: 80%;
+        height: 80%;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        width: 94%;
+        height: 94%;
+    }
+}
+
+.avatar-area #bg-middle {
+    border: 2px solid whitesmoke;
+    animation: wave-middle 2s ease-in-out infinite;
+}
+
+@keyframes wave-middle {
+    from {
+        width: 70%;
+        height: 70%;
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+.avatar-area #bg-main {
+    width: 66%;
+    height: 66%;
+    border-radius: 50%;
+    background: whitesmoke;
+    opacity: 1;
+}
+
+.avatar-area .avatar-dec {
+    border-radius: 50%;
+    position: absolute;
+    border-radius: 24px;
+    opacity: 0.3;
+}
+
+.avatar-area #dec-red {
+    width: 28%;
+    height: 28%;
+    border: 10px solid #FFA07A;
+    /* animation: micro-wave 2s ease-in-out infinite; */
+}
+
+.avatar-area #dec-green {
+    width: 20%;
+    height: 20%;
+    border: 10px solid #9ACD32;
+    /* animation: micro-wave 2s ease-in-out infinite; */
+    animation-delay: .5s;
+}
+
+.avatar-area #dec-blue {
+    width: 10%;
+    height: 10%;
+    border: 10px solid #8470FF;
+    /* animation: micro-wave 3s ease-in-out infinite; */
+    animation-delay: 1s;
+}
+
+@keyframes micro-wave {
+    from {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(90deg);
+        opacity: 0.5;
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* tools */
+
+.tools {
+    width: 100px;
+    height: 200px;
+    position: fixed;
+    top: 8%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tools .default {
+    width: 30px;
+    height: 40px;
+    border-radius: 20px;
+    background: #aa9dff;
+    position: fixed;
+    top: 8%;
+    right: 3%;
+    cursor: pointer;
+}
+
+.default span {
+    width: 6px;
+    height: 6px;
+    position: relative;
+    background: whitesmoke;
+    border-radius: 50%;
+    animation: attention 3s linear infinite;
+}
+
+.tool {
+    width: 50px;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid #f5f5f5;
+    background: #aa9dff;
+    font-size: 12px;
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+.tool:hover {
+    background: #8470FF;
+}
+
+.tools:hover .tool {
+    display: flex;
+    animation: occur-transform .6s ease-in-out forwards;
+}
+
+@keyframes occur-transform {
+    from {
+        left: -20px;
+        opacity: 0;
+    }
+    to {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+#exit {
+    color: #c0b6ff;
+}
+
+#settings {
+    color: #c0b6ff;
+}
+
+
+/* tool弹窗 */
+
+.tool-area {
+    width: 400px;
+    height: 320px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #ddd8ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 20%;
+    z-index: 100;
+    opacity: 0;
+    animation: occur .4s ease-in-out forwards;
+}
+
+.tool-area .tool-title {
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 14%;
+    margin-bottom: 20px;
+}
+
+.tool-area .tool-content {
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 14%;
+}
+
+.tool-area .btn-big {
+    width: 30%;
+    height: 34px;
+    margin: 20px 10px;
+    background: #aa9dff;
+    color: whitesmoke;
+    font-size: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.tool-area .btn-big:hover {
+    background: #8470FF;
+}
+
+
+/* login */
+
+.tool-area #close {
+    width: 24px;
+    height: 24px;
+    background: #aa9dff;
+    border-radius: 50%;
+    color: whitesmoke;
+    font-weight: bolder;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.login-area form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input {
+    width: 60%;
+    height: 30px;
+    margin: 6px;
+    padding: 4px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #aa9dff;
+}
+
+form .bar {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar .option {
+    font-size: 12px;
+    color: #c0b6ff;
+    cursor: pointer;
+}
+
+.loading {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 20px;
+    background: white;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.loading-dot {
+    width: 8px;
+    height: 8px;
+    margin: 8px;
+    border-radius: 50%;
+    background: #c0b6ff;
+    position: relative;
+    animation: jump .8s ease-in-out 3 forwards;
+}
+
+@keyframes jump {
+    from {
+        top: -30px;
+        opacity: 1;
+    }
+    to {
+        top: 0px;
+        opacity: 0;
+    }
+}
+
+
+/* register */
+
+.register-area {
+    width: 350px;
+    height: 300px;
+    top: 25%;
+}
+
+
+/* forgot */
+
+.forgot-area {
+    height: 350px;
+}
+
+
+/* exit */
+
+.exit-area {
+    width: 300px;
+    height: 150px;
+    top: 25%;
+}
+
+
+/* settings */
+
+.settings-area {
+    width: 400px;
+    height: 250px;
+    top: 25%;
+}
+
+
+/* chat-area */
+
+.chat-area {
+    width: 70%;
+    height: 56%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 20%;
+    overflow: auto;
+    opacity: 0;
+    animation: occur .4s ease-in-out forwards;
+    animation-delay: 1s;
+    display: none;
+}
+
+
+/* 滚动条样式 */
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+
+/* 外层轨道 */
+
+::-webkit-scrollbar-track {
+    background: #c0b6ff;
+    border-radius: 2px;
+}
+
+
+/* 拖动条 */
+
+::-webkit-scrollbar-thumb {
+    background: #ddd8ff;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aa9dff;
+}
+
+
+/* 顶端按钮 */
+
+::-webkit-scrollbar-corner {
+    background: #f6f6f6;
+}
+
+.chat-bar {
+    min-width: 20px;
+    max-width: 70%;
+    height: 30px;
+    border-radius: 10px;
+    background: #f5f5f5;
+    padding: 10px;
+    margin: 10px;
+    color: #333333;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    animation: send .4s ease-in-out forwards;
+}
+
+@keyframes send {
+    from {
+        top: 6px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.chat-area .right {
+    align-self: flex-end;
+    background: #aa9dff;
+}
+
+
+/* btn & input */
+
+.btn {
+    width: 12%;
+    min-width: 50px;
+    height: 40px;
+    position: absolute;
+    bottom: 34%;
+    border-radius: 30px;
+    border: 2px solid #c0b6ff;
+    background: #8470FF;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.btn-begin:hover {
+    width: 18%;
+    color: whitesmoke;
+    transform: scale(1.2);
+}
+
+#init #init-text {
+    width: 100%;
+    height: 100%;
+    color: #c0b6ff;
+    font-size: 12px;
+    position: absolute;
+    /* display: none; */
+}
+
+#init #init-text:hover {
+    color: whitesmoke;
+}
+
+#init form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#init input {
+    width: 80%;
+    height: 70%;
+    padding-left: 10px;
+    margin: 2px;
+    border: none;
+    border-radius: 20px 0px 0px 20px;
+    background: #c0b6ff;
+    font-size: 12px;
+    outline: none;
+    display: none;
+}
+
+#init #submit {
+    width: 20%;
+    height: 90%;
+    margin: 2px;
+    border-radius: 0px 20px 20px 0px;
+    background: #aa9dff;
+    color: whitesmoke;
+    font-size: 12px;
+    display: none;
+}
