@@ -1,0 +1,202 @@
+@keyframes in {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes out {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'siyuan';
+  position: relative;
+  animation: in 0.4s ease-out;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 54.4vw;
+  background-image: url(/images/login_bg.png);
+  background-size: 100% auto;
+}
+.top > img {
+  height: 12.8vw;
+}
+.top > span {
+  position: relative;
+  font-size: 14px;
+  color: gray;
+  padding-top: 10px;
+}
+
+.content-wrapper {
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+}
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.animate {
+  animation: in 0.4s ease-out;
+}
+.phone,
+.pwd {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  position: relative;
+}
+.content h5 {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+.phone-content,
+.pwd-content {
+  padding: 0 20px;
+}
+.phone-content :global(.ant-form-item) {
+  margin: 8px 0;
+}
+.pwd-content :global(.ant-form-item) {
+  margin: 4px 0;
+}
+/* phone */
+.phone-input-wrapper,
+.pwd-input-wrapper {
+  margin-bottom: 26px;
+  position: relative;
+}
+.phone-input-wrapper :global(.ant-input-group-addon) {
+  border: none;
+  font-weight: bolder;
+  font-family: 'siyuan';
+  font-size: 16px;
+  color: #000 !important;
+  background-color: transparent !important;
+}
+.phone-input-wrapper :global(.ant-input-wrapper),
+.phone-input-wrapper :global(.ant-input) {
+  border-radius: 20px;
+  background-color: #eee;
+  padding: 8px;
+}
+.phone-input-wrapper :global(.ant-input.ant-input-outlined),
+.phone-input-wrapper :global(.ant-input.ant-input-outlined.ant-input-status-error),
+.phone-input-wrapper :global(.ant-input.ant-input-outlined.ant-input-status-error):hover {
+  background-color: transparent !important;
+}
+.phone-input-wrapper :global(.ant-input-group-wrapper-status-error),
+.pwd-input-wrapper :global(.ant-input-status-error) {
+  border: 2px solid red !important;
+  border-radius: 20px !important;
+}
+.phone-input-wrapper :global(.ant-input-status-error),
+.phone-input-wrapper :global(.ant-form-item-additional) {
+  border: none !important;
+}
+:global(._Login_ .ant-input.ant-input-outlined),
+:global(._Login_ .ant-input.ant-input-outlined):focus {
+  box-shadow: none !important;
+}
+:global(#phone_help .ant-form-item-explain-error) {
+  margin-left: 10px;
+}
+.phone-input-wrapper input {
+  display: block;
+  font-size: 16px;
+  padding: 10px 10px 14px;
+  background-color: transparent;
+  border: none;
+}
+.phone-input-wrapper input::placeholder {
+  color: #bebebe;
+}
+.content .login .btn-next,
+.content .login .btn-login {
+  padding: 14px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px !important;
+  background-color: #a8dbff;
+  border-radius: 20px;
+}
+.btn-next.active,
+.btn-login.active {
+  background-color: #0086ff !important;
+}
+.btn-next {
+  margin-bottom: 44px;
+}
+.tips {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.tips > * {
+  font-size: 12px;
+  color: gray;
+  letter-spacing: 1px;
+}
+.other {
+  text-align: center;
+}
+.other > h6 {
+  font-size: 12px;
+  font-weight: lighter;
+  color: #bbb;
+  padding-bottom: 12px;
+}
+/* pwd */
+.pwd-content {
+  display: flex;
+  flex-direction: column;
+}
+.pwd-content > span {
+  display: block;
+  width: 100%;
+}
+.pwd-content input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 8px;
+  margin-bottom: 4px;
+  font-size: 16px;
+  border-radius: 20px;
+  background-color: #eee !important;
+}
+.pwd-content input:focus {
+  background-color: #eee !important;
+}
+.pwd-content input::placeholder {
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #bbb;
+}
+.btn-login {
+  margin-top: 10px;
+  margin-bottom: 24px;
+}

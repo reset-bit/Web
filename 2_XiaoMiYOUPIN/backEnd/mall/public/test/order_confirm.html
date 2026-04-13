@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+	</head>
+	<body>
+		订单确认页，登录才能访问
+		
+		<script src="/assets/js/jQuery-1.8.2.js"></script>
+		<script src="/assets/js/js-cookie.js"></script>
+		<script>
+			if(!Cookies.get('name')) {
+				window.location.replace('/test.home.js');
+			}
+			// 从地址管理进入：获取id并渲染，也可能点击后退按钮没有传id（等同于从购物车进入）
+			// 从购物车进入：获取当前用户默认收货地址，或显示请选择
+			// 获取当前用户默认收货地址
+			
+			$.ajax({
+				type: 'get',
+				headers: {Authorization:Cookies.get('token')},
+				url: '/address/get_default'
+			});
+		</script>
+	</body>
+</html>

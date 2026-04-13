@@ -1,0 +1,244 @@
+.container {
+	height: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 16vw;
+	line-height: 16vw;
+	padding: 0 20px;
+	z-index: 10;
+	transition: all .3s;
+}
+.header>* {
+	color: #fff;
+}
+.header>span {
+	position: absolute;
+	top: 50%;
+	left: 46%;
+	transform: translate(-50%, -50%);
+	font-size: 20px;
+	font-weight: bold;
+}
+.header.active {
+	background-color: #fff;
+}
+.header.active>* {
+	color: #000;
+	font-size: 16px;
+}
+
+.content {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	padding-top: 26vw;
+	position: relative;
+	background-color: #eee;
+	overflow: auto;
+}
+.content>img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 48vw;
+}
+.content::-webkit-scrollbar {
+	display: none;
+}
+.content>* span {
+	position: relative;
+}
+.content>* i.icon-next {
+	position: absolute;
+	right: -20px;
+	top: 50%;
+	transform: translate(0, -50%);
+	color: gray;
+}
+.receive-area, .product-item, .price-area {
+	padding: 20px 30px 20px 10px;
+	background-color: #fff;
+	border-radius: 16px;
+	margin: 0 10px 10px;
+}
+.receive-area {
+	position: relative;
+}
+.receive-area i.icon-next {
+	right: 20px;
+}
+.receive-content>p {
+	padding-bottom: 6px;
+}
+span.receive-name {
+	padding-right: 10px;
+}
+.receive-address {
+	padding-top: 4px;
+	font-size: 12px;
+}
+.receive-content-default {
+	display: none;
+	height: 5.3vw;
+	line-height: 5.3vw;
+	color: red;
+}
+.receive-area.default .receive-content {
+	display: none;
+}
+.receive-area.default .receive-content-default {
+	display: block;
+}
+.product-area {
+	z-index: 5;
+}
+.product-header {
+	display: flex;
+	align-items: center;
+}
+.product-header>img {
+	height: 6.4vw;
+	margin-right: 6px;
+}
+.product {
+	height: 29.3vw;
+	display: flex;
+}
+.product>img {
+	height: 22.9vw;
+	margin-right: 10px;
+}
+.product-content {
+	flex-grow: 1;
+	padding: 10px 0;
+}
+h6.name {
+	font-size: 16px;
+	padding-bottom: 10px;
+}
+span.product-content-detail {
+	display: flex;
+	justify-content: space-between;
+}
+span.price-wrapper {
+	color: red;
+}
+.content-item {
+	height: 11.2vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.content-item>input {
+	width: 77%;
+}
+.content-item i.icon-next {
+	color: gray;
+}
+.content-item .price-wrapper {
+	color: #000;
+}
+
+.bottom-wrapper {
+	flex-shrink: 0;
+	height: 14.4vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #fff;
+	padding: 0 10px;
+}
+.left {
+	font-size: 14px;
+}
+.left span.total-wrapper {
+	color:  #d40000;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 0 4px;
+}
+.right {
+	padding: 8px 16px;
+	background-color: #d40000;
+	border-radius: 20px;
+	color: #fff;
+}
+
+/* 弹窗部分 */
+.layui-m-layercont {
+	height: 100%;
+}
+.address-container {
+	height: 100%;
+	padding: 16px;
+	position: relative;
+}
+.address-container .top{
+	text-align: center;
+	font-size: 16px;
+}
+.address-content {
+	flex-grow: 1;
+	display: flex;
+}
+.address-content>span.default-text {
+	display: none;
+}
+.address-wrapper {
+	flex-grow: 1;
+}
+.address-item {
+	display: flex;
+	align-items: center;
+	padding: 10px 0;
+}
+.address-item>i.checkbox {
+	height: 6vw;
+	width: 6vw;
+	background-image: url(../images/icon_checkbox_uncheck.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	margin-right: 10px;
+}
+.address-item>i.checkbox.checked {
+	background-image: url(../images/icon_checkbox_check_red.png);
+}
+.address-item>div {
+	flex-grow: 1;
+}
+.address-content.default {
+	align-items: center;
+	justify-content: center;
+}
+.address-content.default>span.default-text {
+	display: inline-block;
+}
+.address-content.default>.address-wrapper {
+	display: none;
+}
+.address-container .bottom-wrapper {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	width: 100%;
+	box-sizing: border-box;
+	justify-content: center;
+}
+.address-container span.btn-other-address {
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	text-align: center;
+	background-color: #ff3000;
+	border-radius: 20px;
+	color: #fff;
+}
+

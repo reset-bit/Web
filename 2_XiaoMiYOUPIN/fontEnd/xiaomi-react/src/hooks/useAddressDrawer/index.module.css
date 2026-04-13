@@ -1,0 +1,67 @@
+.layui-m-layercont {
+  height: 100%;
+}
+.address-container {
+  height: 100%;
+  position: relative;
+}
+.address-container .top {
+  text-align: center;
+  font-size: 16px;
+}
+.address-content {
+  flex-grow: 1;
+  display: flex;
+}
+.address-content > span.default-text {
+  display: none;
+}
+.address-wrapper {
+  flex-grow: 1;
+}
+.address-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+.address-item > i.checkbox {
+  height: 6vw;
+  width: 6vw;
+  background-image: url(/images/icon_checkbox_uncheck.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  margin-right: 10px;
+}
+.address-item > i.checkbox.checked {
+  background-image: url(/images/icon_checkbox_check_red.png);
+}
+.address-item > div {
+  flex-grow: 1;
+}
+.address-content.default {
+  align-items: center;
+  justify-content: center;
+}
+.address-content.default > span.default-text {
+  display: inline-block;
+}
+.address-content.default > .address-wrapper {
+  display: none;
+}
+.address-container .bottom-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: center;
+}
+.address-container span.btn-other-address {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #ff3000;
+  border-radius: 20px;
+  color: #fff;
+}

@@ -1,0 +1,29 @@
+.global-layout {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.global-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #eee;
+  overflow: auto;
+}
+.global-content::-webkit-scrollbar {
+  display: none;
+}
+.global-content > * {
+  height: 100%;
+}
+
+.global-loading {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.global-loading .ant-spin-dot i {
+  color: #dd8b33;
+}

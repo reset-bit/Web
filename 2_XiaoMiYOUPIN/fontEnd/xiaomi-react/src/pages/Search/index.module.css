@@ -1,0 +1,94 @@
+@import '@/App.css';
+
+.search-module {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+.module-header {
+  display: flex;
+  height: var(--header-height);
+  padding: 0 10px;
+  align-items: center;
+}
+.search-area {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  margin: 0 10px;
+  background-color: #eee;
+  border-radius: 20px;
+  height: 36px;
+  position: relative;
+}
+.search-area .icon-search {
+  flex-shrink: 0;
+  font-size: 18px;
+  margin: 0 10px;
+}
+.search-list-wrapper {
+  width: 100%;
+  overflow: hidden;
+  flex-grow: 1;
+  z-index: 0;
+}
+.input-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+input.module-search {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding: 8px 24px;
+}
+:global(._Search_ .ant-carousel) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+:global(._Search_ .slick-slider) {
+  display: flex;
+  align-items: center;
+}
+:global(._Search_ ul.slick-dots) {
+  display: none !important;
+}
+span.btn-search {
+  font-size: 14px;
+  padding: 8px 10px;
+  margin: 10px 0;
+  color: #fff;
+  background-color: #c27012;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+.module-content-wrapper {
+  padding: 10px 10px 0;
+}
+.content-title {
+  padding: 10px 0;
+}
+.module-content > span {
+  display: inline-block;
+  margin: 4px 6px;
+  padding: 6px 10px;
+  color: #000;
+  font-size: 12px;
+  background-color: #eee;
+  border-radius: 20px;
+}
+.module-content-wrapper > img {
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 10px;
+}
